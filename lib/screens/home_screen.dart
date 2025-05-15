@@ -1,3 +1,4 @@
+import 'package:fl_componentes/screens/alert_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +20,14 @@ class HomeScreen extends StatelessWidget {
           leading: Icon(Icons.settings_accessibility),
           title: Text('Item de prueba'),
           trailing: Icon(Icons.arrow_circle_right),
+          onTap:() {
+
+            Navigator.pushNamed(context, 'card');
+            /*
+            final ruta = MaterialPageRoute(builder:(context) => AlertScreen());
+            Navigator.push(context, ruta);*/
+
+          },
         ), 
         separatorBuilder:(context, index) => Divider(), 
         itemCount: 10)
