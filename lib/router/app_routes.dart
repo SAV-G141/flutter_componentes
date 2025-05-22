@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
+import '../models/models.dart';
 import '../screens/screens.dart';
 
 class AppRoutes{
+
   static const initialRoute = 'home';
+
+  //mejora de las opciones para el uso de screens
+  static final menuOptions = <MenuOption>[
+    MenuOption(route: 'listview1', icon: Icons.list_alt_outlined, name: 'ListView1-Screen', screen: ListView1Screen()),
+    MenuOption(route: 'listview2', icon: Icons.line_style_rounded, name: 'ListView2-Screen', screen: ListView2Screen()),
+    MenuOption(route: 'card', icon: Icons.card_giftcard, name: 'CardScreen', screen: CardScreen()),
+    MenuOption(route: 'alert', icon: Icons.bus_alert, name: 'AlertScreen', screen: AlertScreen())
+  ];
+
+
+
+
   static Map<String, Widget Function(BuildContext)> routes = {
     'home': (BuildContext context) => HomeScreen(),
     'listview1': (BuildContext context) => ListView1Screen(),
