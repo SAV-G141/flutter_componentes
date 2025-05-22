@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../router/app_routes.dart';
+
 class HomeScreen extends StatelessWidget {
    
   const HomeScreen({super.key});
@@ -16,12 +18,12 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.separated(
         itemBuilder:(context, index) => ListTile(
-          leading: Icon(Icons.settings_accessibility),
-          title: Text('Item de prueba'),
+          leading: Icon(AppRoutes.menuOptions[index].icon),
+          title: Text(AppRoutes.menuOptions[index].name),
           trailing: Icon(Icons.arrow_circle_right),
           onTap:() {
 
-            Navigator.pushNamed(context, 'card');
+            Navigator.pushNamed(context, AppRoutes.menuOptions[index].route);
             /*
             final ruta = MaterialPageRoute(builder:(context) => AlertScreen());
             Navigator.push(context, ruta);*/
@@ -29,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           },
         ), 
         separatorBuilder:(context, index) => Divider(), 
-        itemCount: 10)
+        itemCount: AppRoutes.menuOptions.length)
     );
   }
 }
