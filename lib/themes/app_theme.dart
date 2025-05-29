@@ -10,6 +10,11 @@ class AppTheme{
     ),
     iconTheme: IconThemeData(
       color: primario
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: primario
+      )
     )
   );
 }
