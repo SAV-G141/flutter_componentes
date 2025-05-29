@@ -11,7 +11,7 @@ class ListView2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigo,
+        //backgroundColor: Colors.indigo,
         title: Text(
           'ListView Version 2',
           style: TextStyle(color: Colors.white),
