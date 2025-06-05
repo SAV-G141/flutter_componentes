@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 class CustomCardType3 extends StatelessWidget {
 
   final String imageURL;
+  final String? descripcion;
 
   const CustomCardType3({
-    super.key, required this.imageURL,
+    super.key, required this.imageURL, this.descripcion,
   });
 
   @override
@@ -31,10 +32,11 @@ class CustomCardType3 extends StatelessWidget {
             fit: BoxFit.cover,
             fadeInDuration: Duration(milliseconds: 300),
             ),
+          if(descripcion != null)
           Container(
             alignment: Alignment.centerRight,
             padding: EdgeInsets.only(right: 30, top: 10, bottom: 10),
-            child: Text('Dragon Ball - La Película'),
+            child: Text(descripcion ?? 'no.tittle'),
           )
         ],
       ),
