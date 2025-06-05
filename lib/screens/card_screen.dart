@@ -16,13 +16,13 @@ class CardScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
           CustomCardType1(),
+          CustomCardType2(),
           CustomCardType1(),
+          CustomCardType2(),
           CustomCardType1(),
+          CustomCardType2(),
           CustomCardType1(),
-          CustomCardType1(),
-          CustomCardType1(),
-          CustomCardType1(),
-          CustomCardType1(),
+          CustomCardType2(),
         ],
       ),
     );
