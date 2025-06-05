@@ -19,7 +19,7 @@ class CardScreen extends StatelessWidget {
           SizedBox(height: 20),
           CustomCardType2(),
           SizedBox(height: 20),
-          CustomCardType3(),
+          CustomCardType3(imageURL: 'https://noticias.imer.mx/wp-content/uploads/2024/05/Dragon-Ball-Goku.jpg',),
           CustomCardType2(),
           CustomCardType1(),
           CustomCardType2(),

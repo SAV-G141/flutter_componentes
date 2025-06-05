@@ -15,6 +15,6 @@ class AppTheme{
       style: TextButton.styleFrom(
         foregroundColor: primario
       )
-    )
+    ),    
   );
 }
