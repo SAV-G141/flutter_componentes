@@ -14,7 +14,10 @@ class AppTheme{
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: primario
-      )
-    )
+      ),    
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primario
+    )    
   );
 }
