@@ -6,10 +6,12 @@ class AlertScreen extends StatelessWidget {
 
   void displayDialog(BuildContext context){
     showDialog(
+      barrierDismissible: true,
       context: context, 
       builder:(context) => AlertDialog(
         title: Text('Alerta de Proceso'),
         content: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Text('Esto es el contenido interno de la alerta')
           ],
@@ -23,11 +25,19 @@ class AlertScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
          child: ElevatedButton(
-          onPressed: (){}, 
-          child: Text('Procesar')),
+          onPressed:() => displayDialog(context), 
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: Text(
+              'Procesar',
+              style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+          )),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.pop(context);
+        },
         child: Icon(Icons.cloud_sync, color: Colors.white,),
         ),
     );

@@ -18,6 +18,13 @@ class AppTheme{
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primario
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primario,
+        //shape: StadiumBorder()
+        //elevation: 0
+      )
     )    
   );
 }
